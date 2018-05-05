@@ -1,0 +1,57 @@
+<!--FIRST MENU-->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>home</mat-icon> Home</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+
+
+      <button mat-button [matMenuTriggerFor]="menu4"><mat-icon>list</mat-icon> Companies</button>
+      <mat-menu #menu4="matMenu">
+        <button mat-menu-item><mat-icon>search</mat-icon>Search for a Company</button>
+        <button mat-menu-item><mat-icon>star</mat-icon>Rate a Company</button>
+                <button mat-menu-item><mat-icon>rate_review</mat-icon>Review a Company</button>
+
+      </mat-menu>
+
+
+
+      <button mat-button [matMenuTriggerFor]="menu2">
+        <mat-icon>note</mat-icon> Other stuff</button>
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+
+
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+
+
+<!--SECOND MENU-->
+<!--<mat-drawer-container class="example-container" [hasBackdrop]="true">-->
+  <!--<mat-drawer #drawer>I'm the menu</mat-drawer>-->
+  <!--<mat-drawer-content>-->
+    <!--<mat-toolbar color="primary">-->
+      <!--<mat-toolbar-row>-->
+    <!--<span>-->
+    <!--<button mat-raised-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>-->
+    <!--</span>-->
+      <!--</mat-toolbar-row>-->
+    <!--</mat-toolbar>-->
+  <!--</mat-drawer-content>-->
+<!--</mat-drawer-container>-->
+<!--<button mat-button [matMenuTriggerFor]="menu">-->
+<!--<mat-icon>menu</mat-icon></button>-->
+<!--<mat-menu #menu="matMenu">-->
+<!--<button mat-menu-item>Item 1</button>-->
+<!--<button mat-menu-item>Item 2</button>-->
+<!--</mat-menu>-->
+
