@@ -1,6 +1,10 @@
-<p>
-  company-main works!
-</p>
+<router-outlet></router-outlet>
+
+
+<mat-form-field class="example-form-field">
+  <span matPrefix>  <mat-icon>search</mat-icon></span>
+  <input matInput type="text" placeholder="Search Companies" [(ngModel)]="value"/>
+</mat-form-field>
 
 
 <mat-accordion>
@@ -47,7 +51,13 @@
       </mat-panel-description>
     </mat-expansion-panel-header>
 
+    <br>
+    <button mat-raised-button (click)="openDialog()">Rate this company</button>
+    <br>
+
     <mat-form-field>
+
+
       <input matInput placeholder="First name">
     </mat-form-field>
     <mat-form-field>

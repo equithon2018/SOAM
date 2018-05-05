@@ -1,0 +1,103 @@
+<!--<app-menu></app-menu>-->
+
+<router-outlet></router-outlet>
+<!-- Routed views go here -->
+<!--<h2 mat-dialog-title>{{description}}</h2>-->
+
+<mat-dialog-content [formGroup]="form">
+  <!--<label>Rate this company in terms of </label>-->
+
+
+  <!--How welcoming is the company enivronment towards new females?-->
+  <!--How well does the comany handle cdomplaints file by women?-->
+  <!--How open is the comany in terms of diversity and inclusivity?-->
+  <!--How often are women considered as project leads?-->
+  <!--How balanced is the male-to-female ratio within the company?-->
+  <!--How proud are you to work at this company?-->
+  <!--How readily available are the opportunitiues to level up for women?-->
+  <!--How well do you feel your rights as a woman have been protected?-->
+  <!--How good are the comany's health benefits for women, including maternity leave?-->
+  <!--How well is the company doing to close the gender pay gap?-->
+
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput matInput #review placeholder="Leave a review" formControlName="description"></textarea>
+  </mat-form-field>
+
+
+
+
+  <div class="container">
+
+    <mat-label>How welcoming is the company enivronment towards new females? </mat-label>
+
+    <button mat-icon-button><mat-icon>star</mat-icon></button>
+    <button mat-icon-button><mat-icon>star</mat-icon></button>
+    <button mat-icon-button><mat-icon>star</mat-icon></button>
+    <button mat-icon-button><mat-icon>star</mat-icon></button>
+    <button mat-icon-button><mat-icon>star</mat-icon></button>
+
+
+    <!--<mat-form-field>-->
+    <!--<mat-label>How welcoming is the company enivronment towards new females?</mat-label>-->
+    <!--<button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>-->
+    <!--<button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>-->
+    <!--<button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>-->
+    <!--&lt;!&ndash;<button mat-icon-button disabled><mat-icon>star</mat-icon></button>&ndash;&gt;-->
+    <!--</mat-form-field>-->
+  </div>
+
+
+  <!--<div class="container">-->
+  <!--<mat-form-field>-->
+  <!--<label>How welcoming is the company enivronment towards new females?</label>-->
+
+  <!--<input matInput placeholder="Input">-->
+  <!--</mat-form-field>-->
+
+  <!--<mat-form-field>-->
+  <!--<textarea matInput placeholder="Textarea"></textarea>-->
+  <!--</mat-form-field>-->
+
+  <!--<mat-form-field>-->
+  <!--<mat-select placeholder="Select">-->
+  <!--<mat-option value="option">Option</mat-option>-->
+  <!--</mat-select>-->
+  <!--</mat-form-field>-->
+  <!--</div>-->
+
+
+
+
+  <!--<mat-form-field>-->
+  <!--<input matInput-->
+  <!--placeholder="Rating"-->
+  <!--formControlName="description">-->
+
+  <!--</mat-form-field>-->
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="mat-raised-button"(click)="close()">Close</button>
+  <button class="mat-raised-button mat-primary"(click)="save()">Rate</button>
+
+</mat-dialog-actions>
+
+<!--<h2 mat-dialog-title>{{description}}</h2>-->
+
+<!--<mat-dialog-content [formGroup]="form">-->
+
+<!--<mat-form-field>-->
+<!--<input matInput-->
+<!--placeholder="Rating"-->
+<!--formControlName="description">-->
+<!---->
+<!--</mat-form-field>-->
+
+<!--</mat-dialog-content>-->
+
+<!--<mat-dialog-actions>-->
+<!--<button class="mat-raised-button"(click)="close()">Close</button>-->
+<!--<button class="mat-raised-button mat-primary"(click)="save()">Save</button>-->
