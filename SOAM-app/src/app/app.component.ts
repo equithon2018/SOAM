@@ -28,6 +28,6 @@ export class AppComponent implements OnInit {
     }
 
     addCompany(): void {
-    this.companyService.addCompany(4, "test3", 3);
+    this.companyService.addCompany(5, "test4", 3, "Tech", "North America", "www.atechcompany.com", 40, 40, 50, "hr@ateachcompany.com");
     }
 }
