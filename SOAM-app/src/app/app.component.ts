@@ -1,25 +1,33 @@
-import { Component } from '@angular/core';
-import { AngularFireModule } from 'angularfire2';
-// for AngularFireDatabase
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { Component, OnInit } from '@angular/core';
+import { Company } from './company';
+import { CompanyService } from './company.service';
 
 import { Observable } from 'rxjs/Rx';
-import { Company } from '../company';
+
+
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
     selector: 'app-root',
-    template: `
-        <ul>
-            <li *ngFor="let company of companies | async">
-                <pre>{{ company.companyName }}</pre>
-            </li>
-        </ul>
-    `
+    templateUrl: './app.component.html',
+    providers: [CompanyService],
 })
-export class AppComponent {
-    public companies: FirebaseListObservable<Company[]>;
-    constructor(db: AngularFireDatabase) {
-        this.companies = db.list('/companies');
+
+export class AppComponent implements OnInit {
+    companies: Company[];
+
+    constructor(private companyService: CompanyService) { }
+
+    ngOnInit() {
+    	this.getCompanies();
+    }
+
+    getCompanies(): void {
+    this.companyService.getCompanies()
+        .subscribe(companies => this.companies = companies);
+    }
+
+    addCompany(): void {
+    this.companyService.addCompany(4, "test3", 3);
     }
 }
