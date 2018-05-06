@@ -1,0 +1,83 @@
+<router-outlet></router-outlet>
+
+
+<mat-form-field class="example-form-field">
+  <span matPrefix>  <mat-icon>search</mat-icon></span>
+  <input matInput type="text" placeholder="Search Companies" [(ngModel)]="value"/>
+</mat-form-field>
+
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Company name 1
+      </mat-panel-title>
+      <mat-panel-description>
+        <div class="button-row">
+          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
+          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
+          <!--<button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>-->
+          <button mat-icon-button disabled><mat-icon>star</mat-icon></button>
+        </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="First name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Age">
+    </mat-form-field>
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Company name 2
+      </mat-panel-title>
+      <mat-panel-description>
+
+
+        <div class="button-row">
+          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
+          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
+          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
+          <!--<button mat-icon-button disabled><mat-icon>star</mat-icon></button>-->
+        </div>
+
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <br>
+    <button mat-raised-button (click)="openDialog()">Rate this company</button>
+    <br>
+
+    <mat-form-field>
+
+
+      <input matInput placeholder="First name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Age">
+    </mat-form-field>
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel>
+
+
+</mat-accordion>
