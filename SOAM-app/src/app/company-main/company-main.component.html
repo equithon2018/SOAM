@@ -7,63 +7,35 @@
 </mat-form-field>
 
 
-<mat-accordion>
-  <mat-expansion-panel>
+<mat-accordion >
+  <mat-expansion-panel *ngFor="let c of companies">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Company name 1
+        {{c.companyName}}
       </mat-panel-title>
       <mat-panel-description>
-        <div class="button-row">
-          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
-          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
-          <!--<button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>-->
-          <button mat-icon-button disabled><mat-icon>star</mat-icon></button>
-        </div>
+          Rating: {{c.rating }}
       </mat-panel-description>
     </mat-expansion-panel-header>
-
-    <mat-form-field>
-      <input matInput placeholder="First name">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Age">
-    </mat-form-field>
-  </mat-expansion-panel>
-
-
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Company name 2
-      </mat-panel-title>
-      <mat-panel-description>
-
-
-        <div class="button-row">
-          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
-          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
-          <button mat-icon-button color="accent"><mat-icon>star</mat-icon></button>
-          <!--<button mat-icon-button disabled><mat-icon>star</mat-icon></button>-->
-        </div>
-
-
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-
+    <mat-list>
+      <mat-list-item>
+          Industry: {{c.industry}}
+      </mat-list-item>
+      <mat-list-item>
+          Location: {{c.location}}
+      </mat-list-item>
+      <mat-list-item>
+          Company Site: {{c.companySite}}
+      </mat-list-item>
+      <mat-list-item>
+          HR Email: {{c.hrEmail}}
+      </mat-list-item>
+    </mat-list>
     <br>
     <button mat-raised-button (click)="openDialog()">Rate this company</button>
     <br>
-
-    <mat-form-field>
-
-
-      <input matInput placeholder="First name">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Age">
-    </mat-form-field>
   </mat-expansion-panel>
+
 
 
   <mat-expansion-panel (opened)="panelOpenState = true"
