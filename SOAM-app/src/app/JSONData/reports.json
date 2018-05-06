@@ -1,0 +1,18 @@
+{
+	"reports": [
+	  {
+	    "name": "Jane",
+	    "companyEmail": "jane@facebook.com",
+	    "subject": "A subject",
+	    "message": "A message",
+	    "progress": "Submitted"
+	  }, 
+	  {
+	    "name": "Bob",
+	    "companyEmail": "bob@google.com",
+	    "subject": "A subject",
+	    "message": "A message",
+	    "progress": "Processing"
+	  }
+	]
+}

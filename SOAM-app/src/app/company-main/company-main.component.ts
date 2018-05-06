@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogConfig} from "@angular/material";
 import {CompanyRatingComponent} from "../company-rating/company-rating.component";
-
+import { Company } from '../company';
+import { COMPANIES } from '../mock-companies';
 
 
 
@@ -11,6 +12,8 @@ import {CompanyRatingComponent} from "../company-rating/company-rating.component
   styleUrls: ['./company-main.component.css']
 })
 export class CompanyMainComponent implements OnInit {
+
+  public companies = COMPANIES;
 
   constructor(private dialog: MatDialog) { }
 
@@ -42,5 +45,6 @@ export class CompanyMainComponent implements OnInit {
   ngOnInit() {
 
   }
+
 
 }
