@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {MatDialog, MatDialogConfig} from "@angular/material";
 import {CompanyRatingComponent} from "../company-rating/company-rating.component";
 import { Company } from '../company';
@@ -38,7 +39,7 @@ export class CompanyMainComponent implements OnInit {
 
 
     dialogRef.afterClosed().subscribe(
-      data => console.log("Dialog output:", data)
+      data => console.log('Dialog output:', data)
     );
   }
 

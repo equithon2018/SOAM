@@ -15,7 +15,7 @@ export class CompanyRatingComponent implements OnInit   {
 
   // constructor() { }
   form: FormGroup;
-  description:string;
+  description: string;
 
 
   constructor(

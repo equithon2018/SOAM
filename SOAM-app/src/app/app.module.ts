@@ -49,12 +49,15 @@ import {MatSidenavModule, MatAutocompleteModule,
   MatTooltipModule,
   MatTreeModule} from '@angular/material';
 import { ReportMainComponent } from './report-main/report-main.component';
+import { MentorshipMainComponent } from './mentorship-main/mentorship-main.component';
 
 
 const appRoutes: Routes = [
   { path: 'companies', component: CompanyMainComponent },
   { path: 'home',      component: LandingPageComponent },
-  { path: 'reports', component: ReportMainComponent}
+  { path: 'reports', component: ReportMainComponent},
+  { path: 'mentorship', component: MentorshipMainComponent}
+
 ];
 
 
@@ -67,7 +70,8 @@ const appRoutes: Routes = [
     MenuComponent,
     CompanyMainComponent,
     CompanyRatingComponent,
-    ReportMainComponent
+    ReportMainComponent,
+    MentorshipMainComponent
   ],
   imports: [
     BrowserModule,
