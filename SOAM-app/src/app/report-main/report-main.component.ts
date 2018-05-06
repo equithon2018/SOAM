@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportMainComponent implements OnInit {
 
+  // submitted: boolean;
+
   constructor() { }
 
   ngOnInit() {
   }
+  submit() {
 
+    // this.submitted = true;
+    // this.dialogRef.close(this.form.value);
+  }
 }

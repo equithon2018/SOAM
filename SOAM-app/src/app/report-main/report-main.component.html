@@ -33,6 +33,13 @@
     <mat-form-field>
       <input matInput placeholder="Full Name">
     </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Gender">
+          <mat-option value="option">Female</mat-option>
+          <mat-option value="option">Male</mat-option>
+
+        </mat-select>
+      </mat-form-field>
 
       <mat-form-field>
         <input matInput placeholder="Company">
@@ -50,16 +57,17 @@
     </mat-form-field>
 
 
-    <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-    </mat-form-field>
+
 
       </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>Submit</button><br>
+    <div class="bcenter">
+    <button mat-button color="primary" (click)="submit()">Submit Report</button>
+    </div>
+    <!--<p ng-show="submitted==true" >This information will be used to match you with a mentor/mentee! </p>-->
+    <!--<button mat-button color="primary">Submit</button><br>-->
     <!--<button mat-button>SHARE</button>-->
   </mat-card-actions>
+  <br>
 </mat-card>
